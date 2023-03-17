@@ -98,7 +98,7 @@ const Navbar = () => {
         <div>
           <AnimatePresence>
             {isNavbar && (
-              <div className="absolute top-0 w-screen h-screen -z-50 flex">
+              <div className="absolute top-0 w-screen h-screen -z-50 flex flex-col lg:flex-row">
                 {NavLinksProps.map((NavLinkProp, i) => (
                   <Fragment key={i}>
                     <NavLink

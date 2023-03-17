@@ -13,7 +13,7 @@ const NavLink = ({
     <>
       <motion.a
         href=""
-        className="text-white text-3xl font-bold w-[15vw] flex justify-center items-center bg-background"
+        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-background"
         initial={initial}
         animate={animate}
         transition={transition}
