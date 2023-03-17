@@ -1,14 +1,26 @@
 import { NavLinkPropsType } from "./Navbar";
+import { motion, AnimatePresence } from "framer-motion";
 
-const NavLink = ({ label, route }: NavLinkPropsType) => {
+const NavLink = ({
+  label,
+  route,
+  initial,
+  animate,
+  transition,
+  exit,
+}: NavLinkPropsType) => {
   return (
     <>
-      <a
+      <motion.a
         href=""
-        className="text-white text-3xl font-bold w-[15vw] flex justify-center items-center"
+        className="text-white text-3xl font-bold w-[15vw] flex justify-center items-center bg-background"
+        initial={initial}
+        animate={animate}
+        transition={transition}
+        exit={exit}
       >
         {label}
-      </a>
+      </motion.a>
     </>
   );
 };
