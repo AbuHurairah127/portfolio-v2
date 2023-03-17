@@ -1,3 +1,5 @@
+import Navbar from "@/components/navbar/Navbar";
+import "./globals.css";
 export const metadata = {
   title: "Abu Hurairah",
   description:
@@ -11,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="overflow-x-hidden">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
