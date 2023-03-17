@@ -1,4 +1,5 @@
 "use client";
+import { NAVLINKS } from "@/constants/NavlinksData";
 import { AnimatePresence } from "framer-motion";
 import { Fragment, useState } from "react";
 import NavbarToggler from "./NavbarToggler";
@@ -25,72 +26,14 @@ export type NavLinkPropsType = {
       ease: string;
     };
   };
+  cta: () => void;
 };
-const NavLinksProps: NavLinkPropsType[] = [
-  {
-    label: "Home",
-    route: "/",
-    initial: { opacity: 0.1, translateY: "-100vw" },
-    animate: { opacity: 1, translateY: 0 },
-    transition: { delay: 0, duration: 1, ease: "easeInOut" },
-    exit: {
-      opacity: 0.1,
-      translateY: "-100vw",
-      transition: { delay: 0, duration: 1, ease: "easeInOut" },
-    },
-  },
-  {
-    label: "About Me",
-    route: "/",
-    initial: { opacity: 0.1, translateY: "-100vw" },
-    animate: { opacity: 1, translateY: 0 },
-    transition: { delay: 0.2, duration: 1, ease: "easeInOut" },
-    exit: {
-      opacity: 0.1,
-      translateY: "-100vw",
-      transition: { delay: 0.2, duration: 1, ease: "easeInOut" },
-    },
-  },
-  {
-    label: "Skills",
-    route: "/",
-    initial: { opacity: 0.1, translateY: "-100vw" },
-    animate: { opacity: 1, translateY: 0 },
-    transition: { delay: 0.4, duration: 1, ease: "easeInOut" },
-    exit: {
-      opacity: 0.1,
-      translateY: "-100vw",
-      transition: { delay: 0.4, duration: 1, ease: "easeInOut" },
-    },
-  },
-  {
-    label: "Projects",
-    route: "/",
-    initial: { opacity: 0.1, translateY: "-100vw" },
-    animate: { opacity: 1, translateY: 0 },
-    transition: { delay: 0.6, duration: 1, ease: "easeInOut" },
-    exit: {
-      opacity: 0.1,
-      translateY: "-100vw",
-      transition: { delay: 0.6, duration: 1, ease: "easeInOut" },
-    },
-  },
-  {
-    label: "Contact Me",
-    route: "/",
-    initial: { opacity: 0.1, translateY: "-100vw" },
-    animate: { opacity: 1, translateY: 0 },
-    transition: { delay: 0.8, duration: 1, ease: "easeInOut" },
-    exit: {
-      opacity: 0.1,
-      translateY: "-100vw",
-      transition: { delay: 0.8, duration: 1, ease: "easeInOut" },
-    },
-  },
-];
 
 const Navbar = () => {
   const [isNavbar, setIsNavbar] = useState<boolean>(false);
+  const setNavbarState = () => {
+    setIsNavbar(!isNavbar);
+  };
   return (
     <>
       <div className="fixed top-0 left-0">
@@ -99,7 +42,7 @@ const Navbar = () => {
           <AnimatePresence>
             {isNavbar && (
               <div className="absolute top-0 w-screen h-screen -z-50 flex flex-col lg:flex-row">
-                {NavLinksProps.map((NavLinkProp, i) => (
+                {NAVLINKS.map((NavLinkProp, i) => (
                   <Fragment key={i}>
                     <NavLink
                       label={NavLinkProp.label}
@@ -108,6 +51,7 @@ const Navbar = () => {
                       animate={NavLinkProp.animate}
                       transition={NavLinkProp.transition}
                       exit={NavLinkProp.exit}
+                      cta={setNavbarState}
                     />
                   </Fragment>
                 ))}

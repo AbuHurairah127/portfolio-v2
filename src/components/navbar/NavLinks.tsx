@@ -1,6 +1,6 @@
 import { NavLinkPropsType } from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Link from "next/link";
 const NavLink = ({
   label,
   route,
@@ -8,20 +8,23 @@ const NavLink = ({
   animate,
   transition,
   exit,
+  cta,
 }: NavLinkPropsType) => {
   return (
-    <>
-      <motion.a
+    <motion.div
+      initial={initial}
+      animate={animate}
+      transition={transition}
+      exit={exit}
+      onClick={cta}
+    >
+      <Link
         href=""
-        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-background"
-        initial={initial}
-        animate={animate}
-        transition={transition}
-        exit={exit}
+        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-gradient-to-b from-background via-primary to-background"
       >
         {label}
-      </motion.a>
-    </>
+      </Link>
+    </motion.div>
   );
 };
 export default NavLink;

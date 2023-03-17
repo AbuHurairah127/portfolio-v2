@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Socials = () => {
   return (
     <motion.div
-      className="w-screen lg:w-[25vw] h-[25vh] lg:h-screen flex items-center justify-evenly bg-background"
+      className="w-screen lg:w-[25vw] h-[25vh] lg:h-screen flex items-center justify-evenly bg-gradient-to-b from-background via-primary to-background"
       initial={{ opacity: 0.1, translateY: "-100vw" }}
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
