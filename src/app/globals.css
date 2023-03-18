@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hero-name {
+    @apply text-5xl font-bold text-center;
+  }
+  .hero-skill {
+    @apply text-white text-5xl font-extrabold mb-8 text-right tracking-widest filter drop-shadow-lg;
+  }
+  .hero-bg-for-sm {
+    background-image: url("/space.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
