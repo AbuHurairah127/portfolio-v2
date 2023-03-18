@@ -1,5 +1,6 @@
 import AboutMe from "@/section/aboutMe/AboutMe";
 import Hero from "@/section/hero/Hero";
+import Skills from "@/section/skills/Skills";
 import React from "react";
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
     <div className="bg-primary w-screen">
       <Hero />
       <AboutMe />
+      <Skills />
     </div>
   );
 };

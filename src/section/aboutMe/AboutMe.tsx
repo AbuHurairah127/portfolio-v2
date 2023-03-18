@@ -182,9 +182,9 @@ const Hero = () => {
             A certified MERN stack and React Native developer with experience
             building web and mobile applications.{" "}
             <span className="font-semibold">
-              &quot;Currently, I'm expanding my skillset by learning Next.js,
-              TypeScript, blockchain, and metaverse technologies to stay on top
-              of the latest trends in the industry.&quot;
+              &quot;Always eager to learn new things. <br /> Always ready to
+              face new challenges and develop new planet scale website, web
+              application and mobile applications.&quot;
             </span>
           </p>
           <p className="mt-5 text-white text-xl ">

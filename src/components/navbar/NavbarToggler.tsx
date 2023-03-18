@@ -8,7 +8,7 @@ const NavbarToggler = (props: {
 }) => {
   return (
     <>
-      <header className="h-20 fixed top-0 right-0 w-screen flex justify-between items-center px-5 backdrop-blur-sm border-b border-b-background/75">
+      <header className="h-20 fixed top-0 left-0 w-screen flex justify-between items-center px-5 backdrop-blur-sm border-b border-b-background/75">
         {!props.isNavbar && (
           <Link
             href={"/"}
