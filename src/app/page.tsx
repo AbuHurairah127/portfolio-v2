@@ -1,11 +1,12 @@
+import AboutMe from "@/section/aboutMe/AboutMe";
 import Hero from "@/section/hero/Hero";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-primary w-screen">
       <Hero />
-      <p></p>
+      <AboutMe />
     </div>
   );
 };

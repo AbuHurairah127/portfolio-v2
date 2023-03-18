@@ -1,8 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import moonImage from "@/assets/moon.jpg";
+import { motion } from "framer-motion";
 const Hero = () => {
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
@@ -80,17 +79,21 @@ const Hero = () => {
         renderer.render(scene, camera);
       };
       animate();
+      return window.addEventListener("scroll", () => {
+        camera.rotation.z = window.scrollY * 0.001;
+        camera.rotation.y = window.scrollY * 0.001;
+      });
     }
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-screen overflow-x-hidden bg-red-500">
       <canvas id="hero" className="hidden lg:block"></canvas>
       <div
         className="bg-cover bg-center h-screen block lg:hidden"
         style={{ backgroundImage: `url(${"/space.jpg"})` }}
       ></div>
-      <div className="absolute top-0 left-0 backdrop-blur-sm h-screen w-screen z-10 flex justify-between items-center p-1">
+      <div className="absolute top-0 left-0 backdrop-blur-sm h-screen w-screen z-10 flex justify-between items-center">
         <div className="bg-white h-fit p-4">
           <p className="hero-name">A</p>
           <p className="hero-name">B</p>
@@ -105,10 +108,10 @@ const Hero = () => {
           <p className="hero-name">A</p>
           <p className="hero-name">H</p>
         </div>
-        <div>
-          <p className="hero-skill">Developer</p>
-          <p className="hero-skill">Designer</p>
-          <p className="hero-skill">Teacher</p>
+        <div className="flex flex-col overflow-x-hidden">
+          <span className="hero-skill">Developer</span>
+          <span className="hero-skill">Designer</span>
+          <span className="hero-skill">Teacher</span>
         </div>
       </div>
     </div>
