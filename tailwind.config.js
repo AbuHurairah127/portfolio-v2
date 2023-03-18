@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         background: "#251C31",
         primary: "#11071F",
+        contactMeDialog: "#763CAC",
       },
     },
   },

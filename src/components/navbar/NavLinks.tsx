@@ -20,7 +20,7 @@ const NavLink = ({
     >
       <Link
         href=""
-        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-gradient-to-b from-background via-primary to-background"
+        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-primary"
       >
         {label}
       </Link>
