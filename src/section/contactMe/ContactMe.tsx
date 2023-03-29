@@ -4,7 +4,10 @@ import { HiMail } from "react-icons/hi";
 
 const ContactMe = () => {
   return (
-    <div className="min-h-screen w-screen flex items-center justify-center py-5">
+    <div
+      className="min-h-screen w-screen flex items-center justify-center py-5"
+      id={"contactMe"}
+    >
       <div className="w-[75vw] min-h-[75vh] bg-contactMeDialog/30 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row">
         <div className="h-full w-full lg:w-1/2 p-5 flex flex-col items-center ">
           <h1 className="text-4xl font-bold text-white mt-12 mb-14">

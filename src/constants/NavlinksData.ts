@@ -3,7 +3,7 @@ import { NavLinkPropsType } from "@/components/navbar/Navbar";
 export const NAVLINKS: NavLinkPropsType[] = [
   {
     label: "Home",
-    route: "/#hero",
+    route: "#main",
     initial: { opacity: 0.1, translateY: "-100vw" },
     animate: { opacity: 1, translateY: 0 },
     transition: { delay: 0, duration: 1, ease: "easeInOut" },
@@ -15,7 +15,7 @@ export const NAVLINKS: NavLinkPropsType[] = [
   },
   {
     label: "About Me",
-    route: "/#aboutme",
+    route: "/#about-me",
     initial: { opacity: 0.1, translateY: "-100vw" },
     animate: { opacity: 1, translateY: 0 },
     transition: { delay: 0.2, duration: 1, ease: "easeInOut" },
@@ -51,7 +51,7 @@ export const NAVLINKS: NavLinkPropsType[] = [
   },
   {
     label: "Contact Me",
-    route: "/",
+    route: "#contactMe",
     initial: { opacity: 0.1, translateY: "-100vw" },
     animate: { opacity: 1, translateY: 0 },
     transition: { delay: 0.8, duration: 1, ease: "easeInOut" },

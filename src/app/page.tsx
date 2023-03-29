@@ -6,12 +6,10 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-primary w-screen">
+    <div className="bg-primary w-screen scroll-smooth">
       <Hero />
       <AboutMe />
-      <div id="aboutme">
-        <Skills />
-      </div>
+      <Skills />
       <ContactMe />
     </div>
   );

@@ -5,7 +5,10 @@ import skillset from "@/assets/skillset.png";
 import { motion } from "framer-motion";
 const Skills = () => {
   return (
-    <div className="flex justify-center items-center flex-col py-8">
+    <div
+      className="flex justify-center items-center flex-col py-8"
+      id={"skills"}
+    >
       <motion.h1
         className="text-yellow-500 text-6xl font-bold"
         initial={{ opacity: 0, scale: 2 }}

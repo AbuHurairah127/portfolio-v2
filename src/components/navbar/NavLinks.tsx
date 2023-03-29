@@ -18,12 +18,12 @@ const NavLink = ({
       exit={exit}
       onClick={cta}
     >
-      <Link
+      <a
         href={route}
         className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-primary"
       >
         {label}
-      </Link>
+      </a>
     </motion.div>
   );
 };
