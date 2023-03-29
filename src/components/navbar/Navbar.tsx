@@ -26,7 +26,7 @@ export type NavLinkPropsType = {
       ease: string;
     };
   };
-  cta: () => void;
+  cta?: () => void;
 };
 
 const Navbar = () => {
@@ -34,6 +34,8 @@ const Navbar = () => {
   const setNavbarState = () => {
     setIsNavbar(!isNavbar);
   };
+  console.log(NAVLINKS);
+
   return (
     <>
       <div className="fixed top-0 left-0 z-50">

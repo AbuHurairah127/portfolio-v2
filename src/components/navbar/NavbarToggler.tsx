@@ -23,6 +23,7 @@ const NavbarToggler = (props: {
         <div className="fixed top-5 right-5">
           <Hamburger
             color="white"
+            toggled={props.isNavbar}
             onToggle={() => {
               props.setIsNavbar(!props.isNavbar);
             }}

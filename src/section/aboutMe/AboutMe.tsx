@@ -72,7 +72,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen max-w-screen relative overflow-x-hidden ">
+    <div
+      className="min-h-screen max-w-screen relative overflow-x-hidden "
+      id={"about-me"}
+    >
       <canvas id="aboutme" className="hidden lg:block"></canvas>
       <div
         className="bg-cover bg-center h-screen block lg:hidden"

@@ -7,7 +7,7 @@ const Hero = () => {
     const textureLoader = new THREE.TextureLoader();
 
     const moonTexture = textureLoader.load("/moon.jpg");
-    const venusTexture = textureLoader.load("/venus.jpg");
+    const venusTexture = textureLoader.load("/Earth.png");
     const spaceTexture = textureLoader.load("/space.jpg");
     const scene = new THREE.Scene();
     scene.background = spaceTexture;
@@ -22,7 +22,7 @@ const Hero = () => {
       const renderer = new THREE.WebGLRenderer({ canvas });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.position.set(3, 3, 8);
+      camera.position.set(1, 2, 10);
 
       renderer.render(scene, camera);
       const pointLight = new THREE.PointLight(0xffffff, 1);
@@ -33,55 +33,57 @@ const Hero = () => {
       const moonGeometry = new THREE.SphereGeometry(2, 64, 64);
       const moonMaterial = new THREE.MeshStandardMaterial({ map: moonTexture });
       const moon = new THREE.Mesh(moonGeometry, moonMaterial);
+      moon.position.set(7, 5, -4);
       scene.add(moon);
       const venusGeometry = new THREE.SphereGeometry(3, 64, 64);
       const venusMaterial = new THREE.MeshBasicMaterial({ map: venusTexture });
       const venus = new THREE.Mesh(venusGeometry, venusMaterial);
-      venus.position.set(8, 5, 5);
+      // venus.position.set(8, 5, 5);
       scene.add(venus);
-      const constSpeed = 0.01;
+      const CONSTSPEED = 0.01;
       window.addEventListener("mousemove", (e) => {
         // For Left quadrant
         if (e.clientX <= window.innerWidth / 2) {
-          moon.rotation.x -= constSpeed;
-          moon.rotation.y += constSpeed;
-          venus.rotation.x -= constSpeed;
-          venus.rotation.y += constSpeed;
+          moon.rotation.x -= CONSTSPEED;
+          moon.rotation.y += CONSTSPEED;
+          venus.rotation.x -= CONSTSPEED;
+          venus.rotation.y += CONSTSPEED;
         }
         // For Right quadrant
         if (e.clientX > window.innerWidth / 2) {
-          moon.rotation.x -= constSpeed;
-          moon.rotation.y -= constSpeed;
-          venus.rotation.x -= constSpeed;
-          venus.rotation.y -= constSpeed;
+          moon.rotation.x -= CONSTSPEED;
+          moon.rotation.y -= CONSTSPEED;
+          venus.rotation.x -= CONSTSPEED;
+          venus.rotation.y -= CONSTSPEED;
         }
         // For Bottom
         if (e.clientY > window.innerHeight / 2) {
-          moon.rotation.x -= constSpeed;
-          moon.rotation.y += constSpeed;
-          venus.rotation.x -= constSpeed;
-          venus.rotation.y += constSpeed;
+          moon.rotation.x -= CONSTSPEED;
+          moon.rotation.y += CONSTSPEED;
+          venus.rotation.x -= CONSTSPEED;
+          venus.rotation.y += CONSTSPEED;
         }
         // For Top
         if (e.clientY <= window.innerHeight / 2) {
-          moon.rotation.x -= constSpeed;
-          moon.rotation.y -= constSpeed;
-          venus.rotation.x -= constSpeed;
-          venus.rotation.y -= constSpeed;
+          moon.rotation.x -= CONSTSPEED;
+          moon.rotation.y -= CONSTSPEED;
+          venus.rotation.x -= CONSTSPEED;
+          venus.rotation.y -= CONSTSPEED;
         }
       });
 
       const animate = () => {
         requestAnimationFrame(animate);
-        moon.rotation.y += 0.001;
-        venus.rotation.y += 0.001;
+        moon.rotation.y += 0.005;
+        venus.rotation.y += 0.004;
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.render(scene, camera);
       };
       animate();
       return window.addEventListener("scroll", () => {
         camera.rotation.z = window.scrollY * 0.001;
-        camera.rotation.y = window.scrollY * 0.001;
+        camera.rotation.y = window.scrollY * 0.0007;
+        // camera.rotation.y = window.scrollY * 0.001;
       });
     }
   }, []);
@@ -93,7 +95,7 @@ const Hero = () => {
         className="bg-cover bg-center h-screen block lg:hidden"
         style={{ backgroundImage: `url(${"/space.jpg"})` }}
       ></div>
-      <div className="absolute top-0 left-0 backdrop-blur-sm h-screen w-screen z-10 flex justify-between items-center">
+      <div className="absolute top-0 left-0  h-screen w-screen z-10 flex justify-between items-center">
         <div className="bg-white h-fit p-4">
           <p className="hero-name">A</p>
           <p className="hero-name">B</p>

@@ -9,7 +9,9 @@ const page = () => {
     <div className="bg-primary w-screen">
       <Hero />
       <AboutMe />
-      <Skills />
+      <div id="aboutme">
+        <Skills />
+      </div>
       <ContactMe />
     </div>
   );
