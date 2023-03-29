@@ -1,8 +1,11 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll();
+
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
 
@@ -27,7 +30,7 @@ const Hero = () => {
       renderer.render(scene, camera);
       const pointLight = new THREE.PointLight(0xffffff, 1);
       const pointLight2 = new THREE.PointLight(0xffffff, 0.1);
-      pointLight.position.set(8, 5, 5);
+      pointLight.position.set(-7, -4, -4);
       pointLight2.position.set(-8, -5, -5);
       scene.add(pointLight, pointLight2);
       const moonGeometry = new THREE.SphereGeometry(2, 64, 64);
@@ -84,37 +87,53 @@ const Hero = () => {
         camera.rotation.z = window.scrollY * 0.001;
         camera.rotation.y = window.scrollY * 0.0007;
         // camera.rotation.y = window.scrollY * 0.001;
+        console.log(scrollYProgress);
       });
     }
   }, []);
 
   return (
-    <div className="min-h-screen w-screen overflow-x-hidden" id="main">
-      <canvas id="hero" className="hidden lg:block"></canvas>
+    <div
+      className="min-h-screen w-screen overflow-x-hidden"
+      id="main"
+      data-scroll-section
+    >
+      <canvas
+        id="hero"
+        className="hidden lg:block"
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target={"#main"}
+      ></canvas>
       <div
         className="bg-cover bg-center h-screen block lg:hidden"
         style={{ backgroundImage: `url(${"/space.jpg"})` }}
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target={"#main"}
       ></div>
-      <div className="absolute top-0 left-0  h-screen w-screen z-10 flex justify-between items-center">
-        <div className="bg-white h-fit p-4">
-          <p className="hero-name">A</p>
-          <p className="hero-name">B</p>
-          <p className="hero-name">U</p>
-          <p className="hero-name"></p>
-          <p className="hero-name">H</p>
-          <p className="hero-name">U</p>
-          <p className="hero-name">R</p>
-          <p className="hero-name">A</p>
-          <p className="hero-name">I</p>
-          <p className="hero-name">R</p>
-          <p className="hero-name">A</p>
-          <p className="hero-name">H</p>
-        </div>
-        <div className="flex flex-col overflow-x-hidden">
-          <span className="hero-skill">Developer</span>
-          <span className="hero-skill">Designer</span>
-          <span className="hero-skill">Teacher</span>
-        </div>
+      <div className="absolute top-0 left-0  h-screen w-screen z-10 flex justify-between items-center ">
+        <motion.div className="h-screen flex items-center justify-center bg-black/60 absolute top-0 w-screen">
+          <motion.h1
+            className="  text-[10vw] text-white text-center uppercase font-thin tracking-wider"
+            initial={{ opacity: 0, translate: "-50vw" }}
+            animate={{ opacity: 1, translate: 0 }}
+            transition={{
+              delay: 1.5,
+              type: "spring",
+              stiffness: 1000,
+              damping: 20,
+            }}
+            data-scroll
+            data-scroll-speed="40"
+            data-scroll-direction="vertical"
+          >
+            Abu Hurairah
+            <p className="text-white text-[2vw]">
+              Hi All I am a developer, designer and teacher
+            </p>
+          </motion.h1>
+        </motion.div>
       </div>
     </div>
   );

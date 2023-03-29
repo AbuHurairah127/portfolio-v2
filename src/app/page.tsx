@@ -1,16 +1,10 @@
-import AboutMe from "@/section/aboutMe/AboutMe";
-import ContactMe from "@/section/contactMe/ContactMe";
-import Hero from "@/section/hero/Hero";
-import Skills from "@/section/skills/Skills";
-import React from "react";
+import ScrollWrapper from "@/components/scrollRapper";
+import React, { useRef } from "react";
 
 const page = () => {
   return (
-    <div className="bg-primary w-screen scroll-smooth">
-      <Hero />
-      <AboutMe />
-      <Skills />
-      <ContactMe />
+    <div data-scroll-container className="bg-primary w-screen scroll-smooth">
+      <ScrollWrapper />
     </div>
   );
 };

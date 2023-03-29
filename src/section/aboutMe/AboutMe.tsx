@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import * as THREE from "three";
 import { motion } from "framer-motion";
-const Hero = () => {
+const AboutMe = () => {
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
 
@@ -202,4 +202,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default AboutMe;

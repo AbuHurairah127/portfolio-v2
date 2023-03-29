@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-50 mix-blend-difference">
+      <div className="fixed top-0 z-30 ">
         <NavbarToggler setIsNavbar={setIsNavbar} isNavbar={isNavbar} />
         <div>
           <AnimatePresence>

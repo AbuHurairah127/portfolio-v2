@@ -17,10 +17,11 @@ const NavLink = ({
       transition={transition}
       exit={exit}
       onClick={cta}
+      className={""}
     >
       <a
         href={route}
-        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-primary"
+        className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-black"
       >
         {label}
       </a>
