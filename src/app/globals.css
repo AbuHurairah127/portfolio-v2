@@ -4,9 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 
 @layer base {
-  .handWriting {
-    font-family: "Petit Formal Script", cursive;
-  }
   /* * {
     outline: 1px solid lime !important;
   } */
