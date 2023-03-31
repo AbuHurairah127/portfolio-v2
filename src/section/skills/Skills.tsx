@@ -1,28 +1,122 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import skillset from "@/assets/skillset.png";
 import { motion } from "framer-motion";
+import html from "./../../assets/html.png";
+import css from "./../../assets/css.png";
+import bootstrap from "./../../assets/bootstrap.png";
+import js from "./../../assets/js.png";
+import ts from "./../../assets/ts.png";
+import react from "./../../assets/react.png";
+import next from "./../../assets/nextjs.png";
+import redux from "./../../assets/redux.png";
+import vs from "./../../assets/vs.png";
+import figma from "./../../assets/figma.png";
+import express from "./../../assets/express.png";
+import nodejs from "./../../assets/nodejs.png";
 const Skills = () => {
+  const SKILLS_ICONS = [
+    html,
+    css,
+    bootstrap,
+    js,
+    ts,
+    react,
+    next,
+    redux,
+    vs,
+    figma,
+    express,
+    nodejs,
+  ];
   return (
     <div
-      className="flex justify-center items-center flex-col py-8"
+      className="flex justify-center items-center flex-col py-8 relative"
       id={"skills"}
+      // data-scroll-section
     >
-      <motion.h1
-        className="text-yellow-500 text-6xl font-bold"
-        initial={{ opacity: 0, scale: 2 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.5 }}
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
       >
-        Skill Set
-      </motion.h1>
-      <p className="text-white text-xl text-center w-[50vw] py-5 my-5 border-y border-white">
-        Currently, I'm expanding my skillset by learning Next.js, TypeScript,
-        blockchain, and metaverse technologies to stay on top of the latest
-        trends in the industry.
-      </p>
-      <Image src={skillset} alt={"skill set"}></Image>
+        S
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        K
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        I{" "}
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        L{" "}
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        L{" "}
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        &nbsp;{" "}
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        S{" "}
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        E
+      </h1>
+      <h1
+        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+        style={{ fontFamily: "Kaushan Script" }}
+        data-scroll
+        data-scroll-speed="-5"
+        data-scroll-direction="vertical"
+      >
+        T
+      </h1>
+      <div></div>
     </div>
   );
 };

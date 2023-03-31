@@ -78,7 +78,7 @@ const AboutMe = () => {
     <div
       className="min-h-screen max-h-fit max-w-screen relative"
       id={"about-me"}
-      scroll-data-section
+      // data-scroll-section
     >
       <div className="absolute top-0 left-0 backdrop-blur-[1px] min-h-screen w-screen z-10 flex justify-evenly bg-black overflow-hidden py-5">
         <div className="w-screen" id="up">
@@ -86,13 +86,13 @@ const AboutMe = () => {
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0"
             style={{ fontFamily: "Kaushan Script" }}
             data-scroll
-            data-scroll-speed="-8"
-            data-scroll-direction="horizontal"
+            data-scroll-speed="-4"
+            data-scroll-direction="vertical"
             data-scroll-target="#up"
           >
             About Me
           </h1>
-          <div className="w-screen flex h-full items-center flex-col justify-center overflow-auto px-10 font-thin my-8">
+          <div className="w-screen flex h-full items-center flex-col justify-center overflow-auto px-20 font-thin my-8">
             <motion.p
               className="text-white mt-8 text-2xl text-center"
               initial={{ opacity: 0, translateY: "10vw" }}

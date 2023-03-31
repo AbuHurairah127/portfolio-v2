@@ -1,6 +1,7 @@
 "use client";
 
 import AboutMe from "@/section/aboutMe/AboutMe";
+import Banner from "@/section/banner/Banner";
 import ContactMe from "@/section/contactMe/ContactMe";
 import Hero from "@/section/hero/Hero";
 import Skills from "@/section/skills/Skills";
@@ -25,12 +26,14 @@ const ScrollWrapper = () => {
         ]
       }
       containerRef={containerRef}
+      className=""
     >
-      <main data-scroll-container ref={containerRef}>
+      <main data-scroll-container ref={containerRef} className="">
         <Hero />
         <AboutMe />
         <Skills />
-        <ContactMe />
+        {/* <Banner /> */}
+        {/* <ContactMe /> */}
       </main>
     </LocomotiveScrollProvider>
   );

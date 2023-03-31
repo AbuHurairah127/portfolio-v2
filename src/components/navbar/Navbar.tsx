@@ -34,11 +34,10 @@ const Navbar = () => {
   const setNavbarState = () => {
     setIsNavbar(!isNavbar);
   };
-  console.log(NAVLINKS);
 
   return (
     <>
-      <div className="fixed top-0 z-30 ">
+      <div className="fixed top-0 z-30 max-w-screen">
         <NavbarToggler setIsNavbar={setIsNavbar} isNavbar={isNavbar} />
         <div>
           <AnimatePresence>
