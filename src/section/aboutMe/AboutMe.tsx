@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import * as THREE from "three";
 import { motion } from "framer-motion";
 import "@fontsource/sirin-stencil";
+import "@fontsource/kaushan-script"; // Defaults to weight 400.
+
 const AboutMe = () => {
   // useEffect(() => {
   //   const textureLoader = new THREE.TextureLoader();
@@ -74,122 +76,71 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen max-w-screen relative overflow-x-hidden "
+      className="min-h-screen max-h-fit max-w-screen relative"
       id={"about-me"}
       scroll-data-section
     >
-      <div className="absolute top-0 left-0 backdrop-blur-[1px] h-screen w-screen z-10 flex justify-evenly items-center bg-black">
-        <div className="w-screen  p-10">
-          <div className="h-fit flex">
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.13"
-              style={{ fontFamily: "Sirin Stencil" }}
+      <div className="absolute top-0 left-0 backdrop-blur-[1px] min-h-screen w-screen z-10 flex justify-evenly bg-black overflow-hidden py-5">
+        <div className="w-screen" id="up">
+          <h1
+            className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0"
+            style={{ fontFamily: "Kaushan Script" }}
+            data-scroll
+            data-scroll-speed="-8"
+            data-scroll-direction="horizontal"
+            data-scroll-target="#up"
+          >
+            About Me
+          </h1>
+          <div className="w-screen flex h-full items-center flex-col justify-center overflow-auto px-10 font-thin my-8">
+            <motion.p
+              className="text-white mt-8 text-2xl text-center"
+              initial={{ opacity: 0, translateY: "10vw" }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.75 }}
+              // data-scroll
+              // data-scroll-direction="horizontal"
+              // data-scroll-speed="10"
             >
-              A
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.09"
-              style={{ fontFamily: "Sirin Stencil" }}
+              &quot;I'm a certified MERN stack and React Native developer with
+              experience building web and mobile applications.&quot;
+            </motion.p>
+            <motion.p
+              className="mt-5 text-white text-xl text-center"
+              initial={{ opacity: 0, translateY: "10vw" }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.75 }}
+              // data-scroll
+              // data-scroll-direction="horizontal"
+              // data-scroll-speed="10"
             >
-              B
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.11"
-              style={{ fontFamily: "Sirin Stencil" }}
+              As a certified developer, I have acquired the necessary knowledge
+              and skills to design and develop high-quality software
+              applications. I have a deep understanding of various programming
+              languages, frameworks, and tools, which enables me to create
+              complex applications that meet the needs of modern users. My
+              expertise extends to developing both web and mobile applications
+              using a range of technologies such as the MERN stack and React
+              Native. I am skilled in creating intuitive and user-friendly
+              interfaces, managing server-side data, building RESTful APIs, and
+              implementing real-time communication features.
+            </motion.p>
+            <motion.p
+              className="mt-5 text-white text-xl text-center"
+              initial={{ opacity: 0, translateY: "10vw" }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.75 }}
+              // data-scroll
+              // data-scroll-direction="horizontal"
+              // data-scroll-speed="10"
             >
-              O
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.06"
-              style={{ fontFamily: "Sirin Stencil" }}
-            >
-              U
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.03"
-              style={{ fontFamily: "Sirin Stencil" }}
-            >
-              T
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.07"
-              style={{ fontFamily: "Sirin Stencil" }}
-            >
-              &nbsp;
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.02"
-              style={{ fontFamily: "Sirin Stencil" }}
-            >
-              M
-            </h1>
-            <h1
-              className="text-[10vw] text-white"
-              data-scroll
-              data-scroll-speed="5"
-              data-scroll-direction="horizontal"
-              data-scroll-delay="0.01"
-              style={{ fontFamily: "Sirin Stencil" }}
-            >
-              E
-            </h1>
+              I have a passion for writing clean, efficient, and maintainable
+              code, and I am constantly staying up-to-date with the latest
+              industry trends and technologies. I take pride in delivering
+              high-quality work and am committed to providing a positive and
+              collaborative development experience.
+            </motion.p>
           </div>
-          <motion.p
-            className="text-white mt-8 text-lg text-center"
-            initial={{ opacity: 0, translateY: "-50vw" }}
-            animate={{ opacity: 1, translateY: 0 }}
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="10"
-          >
-            A certified MERN stack and React Native developer with experience
-            building web and mobile applications.{" "}
-            <span className="font-semibold">
-              &quot;Always eager to learn new things. <br /> Always ready to
-              face new challenges and develop new planet scale website, web
-              application and mobile applications.&quot;
-            </span>
-          </motion.p>
-          <motion.p
-            className="mt-5 text-white text-xl text-center"
-            initial={{ opacity: 0, translateY: "-50vw" }}
-            animate={{ opacity: 1, translateY: 0 }}
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="10"
-          >
-            If you have a project or idea you'd like to discuss, feel free to
-            get in touch with me. I'm always open to new opportunities and
-            collaborations.
-          </motion.p>
         </div>
       </div>
     </div>
