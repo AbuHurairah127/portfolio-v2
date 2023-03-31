@@ -105,93 +105,34 @@ const Skills = () => {
       delay: 3,
     },
   ];
+  const SKILL_SET_SPELL: string[] = [
+    "S",
+    "K",
+    "I",
+    "L",
+    "L",
+    "  ",
+    "S",
+    "E",
+    "T",
+  ];
   return (
     <div
       className="flex justify-center items-center flex-col py-8 relative"
       id={"skills"}
       // data-scroll-section
     >
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        S
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        K
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        I{" "}
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        L{" "}
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        L{" "}
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        &nbsp;{" "}
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        S{" "}
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        E
-      </h1>
-      <h1
-        className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
-        style={{ fontFamily: "Kaushan Script" }}
-        data-scroll
-        data-scroll-speed="-5"
-        data-scroll-direction="vertical"
-      >
-        T
-      </h1>
+      {SKILL_SET_SPELL.map((spell) => (
+        <h1
+          className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10"
+          style={{ fontFamily: "Kaushan Script" }}
+          data-scroll
+          data-scroll-speed="-5"
+          data-scroll-direction="vertical"
+        >
+          {spell}
+        </h1>
+      ))}
       <div className="flex w-[75vw] justify-center flex-wrap">
         {SKILLS_ICONS.map((skill, i) => (
           <motion.div
