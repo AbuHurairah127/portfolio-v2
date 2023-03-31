@@ -6,8 +6,10 @@ const Projects = () => {
     <div className="min-h-screen flex">
       <div className="w-[30vw] min-h-screen bg-black px-8">
         <h2
-          className="text-white text-center font-thin text-[5vw] mt-3"
+          className="text-white text-center font-thin text-[5vw] mt-8"
           style={{ fontFamily: "Sirin Stencil" }}
+          data-scroll
+          data-scroll-speed="1"
         >
           My Projects
         </h2>
@@ -56,7 +58,12 @@ const Projects = () => {
           </motion.p>
         </div>
       </div>
-      <div></div>
+      <div className="min-h-screen w-[70vw] flex justify-center items-center">
+        {/* lorem */}
+        <h1 className="text-[7vw] font-thin text-center">
+          Projects are under development.
+        </h1>
+      </div>
     </div>
   );
 };
