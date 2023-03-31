@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import html from "./../../assets/html.png";
@@ -14,20 +14,96 @@ import vs from "./../../assets/vs.png";
 import figma from "./../../assets/figma.png";
 import express from "./../../assets/express.png";
 import nodejs from "./../../assets/nodejs.png";
+import git from "./../../assets/git.png";
+import github from "./../../assets/github.png";
+import tailwindcss from "./../../assets/tailwindcss.png";
+import firebase from "./../../assets/firebase.png";
 const Skills = () => {
-  const SKILLS_ICONS = [
-    html,
-    css,
-    bootstrap,
-    js,
-    ts,
-    react,
-    next,
-    redux,
-    vs,
-    figma,
-    express,
-    nodejs,
+  const SKILLS_ICONS: {
+    image: StaticImageData;
+    title: string;
+    delay: number;
+  }[] = [
+    {
+      image: html,
+      title: "HTML",
+      delay: 0.0,
+    },
+    {
+      image: css,
+      title: "CSS",
+      delay: 0.2,
+    },
+    {
+      image: bootstrap,
+      title: "BOOTSTRAP",
+      delay: 0.4,
+    },
+    {
+      image: js,
+      title: "JAVASCRIPT",
+      delay: 0.6,
+    },
+    {
+      image: ts,
+      title: "TYPESCRIPT",
+      delay: 0.8,
+    },
+    {
+      image: react,
+      title: "REACT JS",
+      delay: 1,
+    },
+    {
+      image: next,
+      title: "NEXT JS",
+      delay: 1.2,
+    },
+    {
+      image: redux,
+      title: "REDUX",
+      delay: 1.4,
+    },
+    {
+      image: vs,
+      title: "VISUAL STUDIO CODE",
+      delay: 1.6,
+    },
+    {
+      image: figma,
+      title: "FIGMA",
+      delay: 1.8,
+    },
+    {
+      image: express,
+      title: "EXPRESS JS",
+      delay: 2,
+    },
+    {
+      image: nodejs,
+      title: "NODE JS",
+      delay: 2.2,
+    },
+    {
+      image: git,
+      title: "GIT",
+      delay: 2.4,
+    },
+    {
+      image: github,
+      title: "GITHUB",
+      delay: 2.6,
+    },
+    {
+      image: tailwindcss,
+      title: "TAILWIND CSS",
+      delay: 2.8,
+    },
+    {
+      image: firebase,
+      title: "FIREBASE",
+      delay: 3,
+    },
   ];
   return (
     <div
@@ -116,7 +192,19 @@ const Skills = () => {
       >
         T
       </h1>
-      <div></div>
+      <div className="flex w-[75vw] justify-center flex-wrap">
+        {SKILLS_ICONS.map((skill, i) => (
+          <motion.div
+            className="w-20 h-20 bg-black rounded-full flex justify-center items-center mx-8 my-3"
+            initial={{ opacity: 0, translateX: "-100px" }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            transition={{ delay: skill.delay, duration: 0.5 }}
+            title={skill.title}
+          >
+            <Image src={skill.image} alt={""} className="w-10 h-10" />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
