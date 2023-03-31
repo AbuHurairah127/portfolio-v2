@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -8,7 +9,8 @@ module.exports = {
         primary: "#11071F",
         contactMeDialog: "#763CAC",
       },
+      fontFamily: {},
     },
+    plugins: [],
   },
-  plugins: [],
 };

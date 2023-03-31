@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { motion, useScroll } from "framer-motion";
+import "@fontsource/sirin-stencil";
 const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
@@ -93,29 +94,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <div
-      className="min-h-screen w-screen overflow-x-hidden"
-      id="main"
-      data-scroll-section
-    >
-      <canvas
-        id="hero"
-        className="hidden lg:block"
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target={"#main"}
-      ></canvas>
+    <div className="min-h-screen w-screen overflow-x-hidden" id="main">
+      <canvas id="hero" className="hidden lg:block"></canvas>
       <div
         className="bg-cover bg-center h-screen block lg:hidden"
         style={{ backgroundImage: `url(${"/space.jpg"})` }}
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target={"#main"}
       ></div>
       <div className="absolute top-0 left-0  h-screen w-screen z-10 flex justify-between items-center ">
-        <motion.div className="h-screen flex items-center justify-center bg-black/60 absolute top-0 w-screen">
+        <motion.div
+          className="h-screen flex items-center justify-center bg-black/60 absolute top-0 w-screen flex-col"
+          // data-scroll-section
+        >
           <motion.h1
-            className="  text-[10vw] text-white text-center uppercase font-thin tracking-wider"
+            className="  text-[10vw] text-white text-center uppercase font-thin tracking-wider handWriting p-0 m-0"
             initial={{ opacity: 0, translate: "-50vw" }}
             animate={{ opacity: 1, translate: 0 }}
             transition={{
@@ -125,14 +116,28 @@ const Hero = () => {
               damping: 20,
             }}
             data-scroll
-            data-scroll-speed="40"
+            data-scroll-speed="-12"
             data-scroll-direction="vertical"
+            style={{ fontFamily: "Sirin Stencil" }}
           >
             Abu Hurairah
-            <p className="text-white text-[2vw]">
-              Hi All I am a developer, designer and teacher
-            </p>
           </motion.h1>
+          <motion.p
+            className="  text-[2vw] text-white text-center uppercase font-thin tracking-widest handWriting"
+            initial={{ opacity: 0, translate: "-50vw" }}
+            animate={{ opacity: 1, translate: 0 }}
+            transition={{
+              delay: 1.5,
+              type: "spring",
+              stiffness: 1000,
+              damping: 20,
+            }}
+            data-scroll
+            data-scroll-speed="9"
+            style={{ fontFamily: "Sirin Stencil" }}
+          >
+            Hi All I am a developer, designer and teacher
+          </motion.p>
         </motion.div>
       </div>
     </div>

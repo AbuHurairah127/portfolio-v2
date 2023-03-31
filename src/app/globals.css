@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 
+@layer base {
+  .handWriting {
+    font-family: "Petit Formal Script", cursive;
+  }
+  /* * {
+    outline: 1px solid lime !important;
+  } */
+}
 @layer components {
   .hero-name {
     @apply text-5xl font-bold text-center;
