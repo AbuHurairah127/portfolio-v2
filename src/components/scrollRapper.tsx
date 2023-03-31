@@ -4,6 +4,7 @@ import AboutMe from "@/section/aboutMe/AboutMe";
 import Banner from "@/section/banner/Banner";
 import ContactMe from "@/section/contactMe/ContactMe";
 import Hero from "@/section/hero/Hero";
+import Projects from "@/section/projects/Projects";
 import Skills from "@/section/skills/Skills";
 import { ReactNode, useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -32,6 +33,7 @@ const ScrollWrapper = () => {
         <Hero />
         <AboutMe />
         <Skills />
+        <Projects />
         {/* <Banner /> */}
         {/* <ContactMe /> */}
       </main>

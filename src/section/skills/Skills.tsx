@@ -133,7 +133,7 @@ const Skills = () => {
           {spell}
         </h1>
       ))}
-      <div className="flex w-[75vw] justify-center flex-wrap">
+      <div className="flex w-[75vw] justify-center flex-wrap border-b border-b-black/60 bg-white z-10">
         {SKILLS_ICONS.map((skill, i) => (
           <motion.div
             className="w-20 h-20 bg-black rounded-full flex justify-center items-center mx-8 my-3"
