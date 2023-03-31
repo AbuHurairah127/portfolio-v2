@@ -35,7 +35,7 @@ const ScrollWrapper = () => {
         <Skills />
         <Projects />
         {/* <Banner /> */}
-        {/* <ContactMe /> */}
+        <ContactMe />
       </main>
     </LocomotiveScrollProvider>
   );

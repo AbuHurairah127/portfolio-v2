@@ -19,6 +19,6 @@
     @apply text-5xl text-yellow-500 font-extrabold;
   }
   .contact-me-input {
-    @apply px-3 py-2 w-full rounded-lg text-lg bg-white/30 placeholder:italic placeholder:text-white/80 text-white ring-0 outline-none mb-5;
+    @apply px-3 py-2 w-full bg-black text-lg placeholder:italic placeholder:text-white/40 placeholder:font-thin text-white ring-0 outline-none mb-5 border-b;
   }
 }
