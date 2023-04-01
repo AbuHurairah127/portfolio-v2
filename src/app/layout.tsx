@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="">
-      <body className="overflow-x-hidden w-screen overflow-y-clip">
+      <body className="overflow-x-hidden w-screen bg-red-400">
         <Navbar />
         {children}
       </body>

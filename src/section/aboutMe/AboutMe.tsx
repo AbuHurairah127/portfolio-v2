@@ -76,11 +76,11 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen max-h-fit max-w-screen relative"
+      className="min-h-screen w-screen lg:relative"
       id={"about-me"}
       // data-scroll-section
     >
-      <div className="absolute top-0 left-0 backdrop-blur-[1px] min-h-screen w-screen z-10 flex justify-evenly bg-black overflow-hidden py-5">
+      <div className="lg:absolute min-h-fit w-screen z-10 flex justify-evenly bg-black py-5">
         <div className="w-screen" id="up">
           <h1
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 hidden lg:block"
@@ -100,7 +100,7 @@ const AboutMe = () => {
           >
             About Me
           </motion.h1>
-          <div className="w-screen flex h-full items-center flex-col justify-center overflow-auto px-20 font-thin lg:my-8">
+          <div className="w-screen flex min-h-fit items-center flex-col justify-center px-10 lg:px-20 font-thin lg:my-8">
             <motion.p
               className="text-white mt-8 text-2xl text-center"
               initial={{ opacity: 0, translateY: "10vw" }}
@@ -134,7 +134,7 @@ const AboutMe = () => {
               implementing real-time communication features.
             </motion.p>
             <motion.p
-              className="mt-5 text-white text-xl text-center"
+              className="mt-5 text-white text-xl text-center bg-black"
               initial={{ opacity: 0, translateY: "10vw" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.75 }}
