@@ -106,7 +106,7 @@ const Hero = () => {
           // data-scroll-section
         >
           <motion.h1
-            className="  text-[10vw] text-white text-center uppercase font-thin tracking-wider handWriting p-0 m-0"
+            className=" text-[15vw] lg:text-[10vw] text-white text-center uppercase font-thin tracking-wider handWriting p-0 m-0"
             initial={{ opacity: 0, translate: "-50vw" }}
             animate={{ opacity: 1, translate: 0 }}
             transition={{
@@ -123,7 +123,7 @@ const Hero = () => {
             Abu Hurairah
           </motion.h1>
           <motion.p
-            className="  text-[2vw] text-white text-center uppercase font-thin tracking-widest handWriting"
+            className=" text-[5vw] lg:text-[2vw] text-white text-center uppercase font-thin tracking-widest handWriting"
             initial={{ opacity: 0, translate: "-50vw" }}
             animate={{ opacity: 1, translate: 0 }}
             transition={{
