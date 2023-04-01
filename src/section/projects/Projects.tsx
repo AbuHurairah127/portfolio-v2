@@ -3,10 +3,10 @@ import { motion, spring } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen flex">
-      <div className="w-[30vw] min-h-screen bg-black px-8">
+    <div className="min-h-screen flex flex-col lg:flex-row">
+      <div className="lg:w-[30vw] lg:min-h-screen bg-black px-8">
         <h2
-          className="text-white text-center font-thin text-[5vw] mt-8"
+          className="text-white text-center font-thin lg:text-[5vw] mt-8 text-[9vw]"
           style={{ fontFamily: "Sirin Stencil" }}
           data-scroll
           data-scroll-speed="1"
@@ -58,7 +58,7 @@ const Projects = () => {
           </motion.p>
         </div>
       </div>
-      <div className="min-h-screen w-[70vw] flex justify-center items-center">
+      <div className="min-h-screen lg:w-[70vw] flex justify-center items-center">
         {/* lorem */}
         <h1 className="text-[7vw] font-thin text-center">
           Projects are under development.
