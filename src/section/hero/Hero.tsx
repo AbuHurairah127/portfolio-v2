@@ -84,12 +84,6 @@ const Hero = () => {
         renderer.render(scene, camera);
       };
       animate();
-      return window.addEventListener("scroll", () => {
-        camera.rotation.z = window.scrollY * 0.001;
-        camera.rotation.y = window.scrollY * 0.0007;
-        // camera.rotation.y = window.scrollY * 0.001;
-        console.log(scrollYProgress);
-      });
     }
   }, []);
 

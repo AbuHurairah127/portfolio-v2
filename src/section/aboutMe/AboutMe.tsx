@@ -76,11 +76,11 @@ const AboutMe = () => {
 
   return (
     <div
-      className="min-h-screen w-screen lg:relative"
+      className="min-h-screen max-h-fit max-w-screen z-50 relative"
       id={"about-me"}
       // data-scroll-section
     >
-      <div className="lg:absolute min-h-fit w-screen z-10 flex justify-evenly bg-black py-5">
+      <div className="lg:absolute lg:top-0 lg:left-0 backdrop-blur-[1px] min-h-screen w-screen z-10 flex justify-evenly bg-black overflow-hidden py-5 sm:z-50">
         <div className="w-screen" id="up">
           <h1
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 hidden lg:block"
@@ -93,14 +93,12 @@ const AboutMe = () => {
             About Me
           </h1>
           <motion.h1
-            className="text-[12vw] text-center text-white uppercase font-thin tracking-wider p-0 m-0 block lg:hidden"
+            className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 block lg:hidden"
             style={{ fontFamily: "Kaushan Script" }}
-            initial={{ opacity: 0, translateY: "10vw" }}
-            animate={{ opacity: 1, translateY: 0 }}
           >
             About Me
           </motion.h1>
-          <div className="w-screen flex min-h-fit items-center flex-col justify-center px-10 lg:px-20 font-thin lg:my-8">
+          <div className="w-screen flex h-full items-center flex-col justify-center overflow-auto px-20 font-thin my-8">
             <motion.p
               className="text-white mt-8 text-2xl text-center"
               initial={{ opacity: 0, translateY: "10vw" }}
@@ -134,7 +132,7 @@ const AboutMe = () => {
               implementing real-time communication features.
             </motion.p>
             <motion.p
-              className="mt-5 text-white text-xl text-center bg-black"
+              className="mt-5 text-white text-xl text-center"
               initial={{ opacity: 0, translateY: "10vw" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.75 }}
