@@ -3,6 +3,7 @@
 import AboutMe from "@/section/aboutMe/AboutMe";
 import Banner from "@/section/banner/Banner";
 import ContactMe from "@/section/contactMe/ContactMe";
+import Footer from "@/section/footer/Footer";
 import Hero from "@/section/hero/Hero";
 import Projects from "@/section/projects/Projects";
 import Skills from "@/section/skills/Skills";
@@ -36,6 +37,7 @@ const ScrollWrapper = () => {
         <Projects />
         {/* <Banner /> */}
         <ContactMe />
+        <Footer />
       </main>
     </LocomotiveScrollProvider>
   );

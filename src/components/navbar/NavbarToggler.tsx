@@ -10,7 +10,7 @@ const NavbarToggler = (props: {
   return (
     <>
       <header className="h-20 max-w-screen flex justify-between items-center bg-transparent absolute top-0">
-        <div className="fixed top-5 right-5">
+        <div className="fixed top-5 right-5 bg-black w-20 flex justify-center items-center rounded-full h-20">
           <Hamburger
             color="white"
             toggled={props.isNavbar}
