@@ -1,15 +1,20 @@
 import React from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
-
+import { motion } from "framer-motion";
 const ContactMe = () => {
   return (
     <div
       className="min-h-screen w-screen flex items-center justify-center py-5 bg-[#000814]"
       id={"contactMe"}
     >
-      <div className="w-[75vw] min-h-[75vh] bg-white rounded-[2.5rem] flex flex-col lg:flex-row overflow-hidden border border-white">
-        <div className="h-full w-full lg:w-1/2 flex flex-col items-center bg-white overflow-hidden">
+      <div className="w-[75vw] min-h-[75vh] rounded-[2.5rem] flex flex-col lg:flex-row overflow-hidden border border-white">
+        <motion.div
+          className="min-h-[75vh] w-full lg:w-1/2 flex flex-col items-center bg-white overflow-hidden"
+          initial={{ opacity: 0, translateX: "-25vw" }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <h1 className="text-[4vw] font-bold mt-12 mb-14">Get In Touch</h1>
           <p className="text-xl w-[60%] text-center mb-12 font-thin tracking-widest">
             I am very approachable and would love to speak to you. Feel free to
@@ -40,8 +45,13 @@ const ContactMe = () => {
               </a>
             </div>
           </div>
-        </div>
-        <div className="w-full lg:w-1/2 h-full p-5 flex flex-col items-center bg-black">
+        </motion.div>
+        <motion.div
+          className="w-full lg:w-1/2 h-full p-5 flex flex-col items-center bg-black"
+          initial={{ opacity: 0, translateX: "25vw" }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <h1 className="text-4xl font-bold text-white mt-12 mb-10">
             Send me a message
           </h1>
@@ -75,7 +85,7 @@ const ContactMe = () => {
               Send Message
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
