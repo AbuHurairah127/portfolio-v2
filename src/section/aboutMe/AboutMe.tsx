@@ -108,8 +108,8 @@ const AboutMe = () => {
               // data-scroll-direction="horizontal"
               // data-scroll-speed="10"
             >
-              &quot;I'm a certified MERN stack and React Native developer with
-              experience building web and mobile applications.&quot;
+              &quot;I&apos;m a certified MERN stack and React Native developer
+              with experience building web and mobile applications.&quot;
             </motion.p>
             <motion.p
               className="mt-5 text-white text-xl text-center"

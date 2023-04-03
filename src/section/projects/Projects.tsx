@@ -7,7 +7,7 @@ const Projects = () => {
       <div className="lg:w-[30vw] lg:min-h-screen bg-black px-8">
         <h2
           className="text-white text-center font-thin lg:text-[5vw] mt-8 text-[9vw]"
-          style={{ fontFamily: "Sirin Stencil" }}
+          style={{ fontFamily: "kaushan script" }}
           data-scroll
           data-scroll-speed="1"
         >

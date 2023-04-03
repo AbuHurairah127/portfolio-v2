@@ -1,12 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { motion, useScroll } from "framer-motion";
-import "@fontsource/sirin-stencil";
-const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll();
+import { motion } from "framer-motion";
 
+const Hero = () => {
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
 
@@ -112,7 +109,7 @@ const Hero = () => {
             data-scroll
             data-scroll-speed="-12"
             data-scroll-direction="vertical"
-            style={{ fontFamily: "Sirin Stencil" }}
+            style={{ fontFamily: "kaushan script" }}
           >
             Abu Hurairah
           </motion.h1>

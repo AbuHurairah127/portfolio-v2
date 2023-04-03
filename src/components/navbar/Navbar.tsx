@@ -1,8 +1,8 @@
 "use client";
 import { NAVLINKS } from "@/constants/NavlinksData";
 import { AnimatePresence } from "framer-motion";
+import Hamburger from "hamburger-react";
 import { Fragment, useState } from "react";
-import NavbarToggler from "./NavbarToggler";
 import NavLink from "./NavLinks";
 import Socials from "./Socials";
 export type NavLinkPropsType = {
@@ -38,7 +38,16 @@ const Navbar = () => {
   return (
     <>
       <div className="fixed top-0 z-30 max-w-screen">
-        <NavbarToggler setIsNavbar={setIsNavbar} isNavbar={isNavbar} />
+        {/* <NavbarToggler setIsNavbar={setIsNavbar} isNavbar={isNavbar} /> */}
+        <div className="fixed top-5 right-5 bg-black w-20 flex justify-center items-center rounded-full h-20">
+          <Hamburger
+            color="white"
+            toggled={isNavbar}
+            onToggle={() => {
+              setIsNavbar(!isNavbar);
+            }}
+          />
+        </div>
         <div>
           <AnimatePresence>
             {isNavbar && (

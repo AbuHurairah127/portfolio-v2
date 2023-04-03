@@ -22,6 +22,7 @@ const NavLink = ({
       <a
         href={route}
         className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-black"
+        style={{ fontFamily: "sirin stencil" }}
       >
         {label}
       </a>

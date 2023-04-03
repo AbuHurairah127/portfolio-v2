@@ -122,8 +122,9 @@ const Skills = () => {
       id={"skills"}
       // data-scroll-section
     >
-      {SKILL_SET_SPELL.map((spell) => (
+      {SKILL_SET_SPELL.map((spell, i) => (
         <h1
+          key={i}
           className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10 hidden lg:block"
           style={{ fontFamily: "Kaushan Script" }}
           data-scroll
@@ -146,6 +147,7 @@ const Skills = () => {
       <div className="flex w-[75vw] justify-center flex-wrap border-b border-b-black/60 bg-white lg:z-10">
         {SKILLS_ICONS.map((skill, i) => (
           <motion.div
+            key={i}
             className="w-20 h-20 bg-black rounded-full flex justify-center items-center mx-8 my-3"
             initial={{ opacity: 0, translateX: "-100px" }}
             whileInView={{ opacity: 1, translateX: 0 }}

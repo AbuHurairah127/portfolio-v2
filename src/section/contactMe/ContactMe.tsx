@@ -15,8 +15,16 @@ const ContactMe = () => {
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className="text-[4vw] font-bold mt-12 mb-14">Get In Touch</h1>
-          <p className="text-xl w-[60%] text-center mb-12 font-thin tracking-widest">
+          <h1
+            className="text-[4vw] font-bold mt-12 mb-14"
+            style={{ fontFamily: "kaushan script" }}
+          >
+            Get In Touch
+          </h1>
+          <p
+            className="text-xl w-[60%] text-center mb-12 font-thin tracking-widest"
+            style={{ fontFamily: "sirin stencil" }}
+          >
             I am very approachable and would love to speak to you. Feel free to
             call, send me an email . Follow me in social media or simply
             complete the enquiry form.
@@ -47,44 +55,25 @@ const ContactMe = () => {
           </div>
         </motion.div>
         <motion.div
-          className="w-full lg:w-1/2 h-full p-5 flex flex-col items-center bg-black"
+          className="w-full lg:w-1/2 min-h-[75vh] p-5 flex flex-col items-center bg-black justify-evenly"
           initial={{ opacity: 0, translateX: "25vw" }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className="text-4xl font-bold text-white mt-12 mb-10">
+          <h1
+            className="text-4xl font-bold text-white mt-12 mb-10"
+            style={{ fontFamily: "kaushan script" }}
+          >
             Send me a message
           </h1>
-          <form className="w-[75%]">
-            <input
-              type="text"
-              placeholder="Name e.g: Abu Hurairah"
-              className="contact-me-input"
-            />
-            <input
-              type="text"
-              placeholder="Email e.g abc@xyz.com"
-              className="contact-me-input"
-            />
-            <input
-              type="text"
-              placeholder="Subject e.g : Discuss an LMS"
-              className="contact-me-input"
-            />
-            <textarea
-              name=""
-              id=""
-              className="resize-none contact-me-input"
-              rows={5}
-              placeholder="e.g: Hey Abu Hurairah, I want an LMS for my academic institute. Basically, I run a tuition center named Al-Bassam Academy where I teach students from class..."
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-white text-2xl text-[#000814] py-2 px-8 rounded-xl tracking-wider font-thin"
-            >
-              Send Message
-            </button>
-          </form>
+          <a
+            href="https://wa.me/923207443537"
+            className="text-white border-white border py-5 px-10 self-center text-3xl font-thin rounded"
+            target="_blank"
+            style={{ fontFamily: "sirin stencil" }}
+          >
+            Say Hello👋
+          </a>
         </motion.div>
       </div>
     </div>
