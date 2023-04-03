@@ -1,4 +1,4 @@
-import ScrollWrapper from "@/components/scrollRapper";
+import ScrollWrapper from "@/section/scrollRapper";
 import React from "react";
 
 const page = () => {
