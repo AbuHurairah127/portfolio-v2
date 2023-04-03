@@ -1,7 +1,7 @@
 "use client";
 
 import AboutMe from "@/section/aboutMe/AboutMe";
-import Banner from "@/section/banner/Banner";
+// import Banner from "@/section/banner/Banner";
 import ContactMe from "@/section/contactMe/ContactMe";
 import Footer from "@/section/footer/Footer";
 import Hero from "@/section/hero/Hero";
