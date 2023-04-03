@@ -1,3 +1,4 @@
+import { kaushan } from "@/section/hero/Hero";
 import { NavLinkPropsType } from "./Navbar";
 import { motion } from "framer-motion";
 // import Link from "next/link";
@@ -22,7 +23,7 @@ const NavLink = ({
       <a
         href={route}
         className="text-white text-3xl font-bold w-screen lg:w-[15vw] h-[15vh] lg:h-screen flex justify-center items-center bg-black"
-        style={{ fontFamily: "sirin stencil" }}
+        style={{ fontFamily: kaushan.style.fontFamily }}
       >
         {label}
       </a>

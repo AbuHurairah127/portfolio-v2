@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { kaushan, sirin } from "../hero/Hero";
 const ContactMe = () => {
   return (
     <div
@@ -17,13 +18,13 @@ const ContactMe = () => {
         >
           <h1
             className="text-[4vw] font-bold mt-12 mb-14"
-            style={{ fontFamily: "kaushan script" }}
+            style={{ fontFamily: kaushan.style.fontFamily }}
           >
             Get In Touch
           </h1>
           <p
             className="text-xl w-[60%] text-center mb-12 font-thin tracking-widest"
-            style={{ fontFamily: "sirin stencil" }}
+            style={{ fontFamily: sirin.style.fontFamily }}
           >
             I am very approachable and would love to speak to you. Feel free to
             call, send me an email . Follow me in social media or simply
@@ -37,7 +38,7 @@ const ContactMe = () => {
               <a
                 href="tel:+923207443537"
                 className="text-xl ml-5 font-semibold"
-                style={{ fontFamily: "Sirin Stencil" }}
+                style={{ fontFamily: sirin.style.fontFamily }}
               >
                 +92 320 7443537
               </a>
@@ -49,7 +50,7 @@ const ContactMe = () => {
               <a
                 href="mailto:dev.abuhurairah@gmail.com"
                 className=" text-xl ml-5 font-semibold"
-                style={{ fontFamily: "Sirin Stencil" }}
+                style={{ fontFamily: sirin.style.fontFamily }}
               >
                 dev.abuhurairah@gmail.com
               </a>
@@ -64,7 +65,7 @@ const ContactMe = () => {
         >
           <h1
             className="text-4xl font-bold text-white mt-12 mb-10"
-            style={{ fontFamily: "kaushan script" }}
+            style={{ fontFamily: kaushan.style.fontFamily }}
           >
             Send me a message
           </h1>
@@ -72,7 +73,7 @@ const ContactMe = () => {
             href="https://wa.me/923207443537"
             className="text-white border-white border py-5 px-10 self-center text-3xl font-thin rounded"
             target="_blank"
-            style={{ fontFamily: "sirin stencil" }}
+            style={{ fontFamily: sirin.style.fontFamily }}
           >
             Say Hello👋
           </a>

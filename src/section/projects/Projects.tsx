@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, spring } from "framer-motion";
+import { kaushan, sirin } from "../hero/Hero";
 
 const Projects = () => {
   return (
@@ -7,7 +8,7 @@ const Projects = () => {
       <div className="lg:w-[30vw] lg:min-h-screen bg-black px-8">
         <h2
           className="text-white text-center font-thin lg:text-[5vw] mt-8 text-[9vw]"
-          style={{ fontFamily: "kaushan script" }}
+          style={{ fontFamily: kaushan.style.fontFamily }}
           data-scroll
           data-scroll-speed="1"
         >
@@ -19,6 +20,7 @@ const Projects = () => {
             initial={{ opacity: 0, translateY: "10vw" }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.75 }}
+            style={{ fontFamily: sirin.style.fontFamily }}
           >
             In this section, you can find some of the projects that I have
             developed as a software developer. These projects showcase my skills
@@ -38,7 +40,7 @@ const Projects = () => {
               damping: 200,
             }}
             style={{
-              fontFamily: "Sirin Stencil",
+              fontFamily: sirin.style.fontFamily,
             }}
           >
             Note:&nbsp;
@@ -48,6 +50,7 @@ const Projects = () => {
             initial={{ opacity: 0, translateY: "10vw" }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
+            style={{ fontFamily: sirin.style.fontFamily }}
           >
             As, I am unable to showcase all of my projects due to client privacy
             policies, I can assure you that my portfolio represents a
@@ -60,7 +63,10 @@ const Projects = () => {
       </div>
       <div className="min-h-screen lg:w-[70vw] flex justify-center items-center">
         {/* lorem */}
-        <h1 className="text-[7vw] font-thin text-center">
+        <h1
+          className="text-[7vw] font-thin text-center"
+          style={{ fontFamily: sirin.style.fontFamily }}
+        >
           Projects are under development.
         </h1>
       </div>
