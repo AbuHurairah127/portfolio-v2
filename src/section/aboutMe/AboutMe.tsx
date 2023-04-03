@@ -1,79 +1,8 @@
-"use client";
-import { useEffect } from "react";
-import * as THREE from "three";
 import { motion } from "framer-motion";
 import "@fontsource/sirin-stencil";
 import "@fontsource/kaushan-script"; // Defaults to weight 400.
 
 const AboutMe = () => {
-  // useEffect(() => {
-  //   const textureLoader = new THREE.TextureLoader();
-
-  //   const cubeTexture = textureLoader.load("/abuhurairah.png");
-  //   const scene = new THREE.Scene();
-  //   scene.background = new THREE.Color(0x11071f);
-  //   const camera = new THREE.PerspectiveCamera(
-  //     75,
-  //     window.innerWidth / window.innerHeight,
-  //     0.1,
-  //     1000
-  //   );
-  //   const canvas = document.getElementById("aboutme") as HTMLCanvasElement;
-  //   if (canvas) {
-  //     const renderer = new THREE.WebGLRenderer({ canvas });
-  //     renderer.setPixelRatio(window.devicePixelRatio);
-  //     renderer.setSize(window.innerWidth, window.innerHeight);
-  //     camera.position.set(0, 1, -9);
-  //     renderer.render(scene, camera);
-
-  //     const ambientLight = new THREE.AmbientLight(0xffffff);
-  //     scene.add(ambientLight);
-
-  //     const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-  //     const cubeMaterial = new THREE.MeshStandardMaterial({ map: cubeTexture });
-  //     const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-  //     scene.add(cube);
-
-  //     const constSpeed = 0.008;
-  //     window.addEventListener("mousemove", (e) => {
-  //       // For Left quadrant
-  //       if (e.clientX <= window.innerWidth / 2) {
-  //         cube.rotation.x -= constSpeed;
-  //         cube.rotation.y += constSpeed;
-  //       }
-  //       // For Right quadrant
-  //       if (e.clientX > window.innerWidth / 2) {
-  //         cube.rotation.x -= constSpeed;
-  //         cube.rotation.y -= constSpeed;
-  //       }
-  //       // For Bottom
-  //       if (e.clientY > window.innerHeight / 2) {
-  //         cube.rotation.x -= constSpeed;
-  //         cube.rotation.y += constSpeed;
-  //       }
-  //       // For Top
-  //       if (e.clientY <= window.innerHeight / 2) {
-  //         cube.rotation.x -= constSpeed;
-  //         cube.rotation.y -= constSpeed;
-  //       }
-  //     });
-
-  //     const animate = () => {
-  //       requestAnimationFrame(animate);
-  //       cube.rotation.y += 0.001;
-  //       cube.rotation.x += 0.002;
-  //       cube.rotation.z += 0.005;
-  //       renderer.setSize(window.innerWidth, window.innerHeight);
-  //       renderer.render(scene, camera);
-  //     };
-  //     animate();
-  //     return window.addEventListener("scroll", () => {
-  //       camera.rotation.z = window.scrollY * -0.0001;
-  //       camera.rotation.y = window.scrollY * -0.003;
-  //     });
-  //   }
-  // }, []);
-
   return (
     <div
       className="min-h-screen max-h-fit max-w-screen z-50 relative"
@@ -82,6 +11,7 @@ const AboutMe = () => {
     >
       <div className="lg:absolute lg:top-0 lg:left-0 backdrop-blur-[1px] min-h-screen w-screen z-10 flex justify-evenly bg-black overflow-hidden py-5 sm:z-50">
         <div className="w-screen" id="up">
+          {/* For LG screen */}
           <h1
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 hidden lg:block"
             style={{ fontFamily: "Kaushan Script" }}
@@ -92,6 +22,7 @@ const AboutMe = () => {
           >
             About Me
           </h1>
+          {/* For smaller screens */}
           <motion.h1
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 block lg:hidden"
             style={{ fontFamily: "Kaushan Script" }}

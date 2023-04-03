@@ -1,6 +1,6 @@
 import { NavLinkPropsType } from "./Navbar";
-import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import { motion } from "framer-motion";
+// import Link from "next/link";
 const NavLink = ({
   label,
   route,

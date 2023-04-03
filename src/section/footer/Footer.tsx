@@ -6,9 +6,9 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { BsStackOverflow, BsWhatsapp } from "react-icons/bs";
+import Year from "./Year";
 const Footer = () => {
   const today = new Date().getFullYear();
-  console.log("🚀 ~ file: Footer.tsx:5 ~ Footer ~ today:", today);
   return (
     <div className="min-h-screen w-screen p-20 relative flex flex-col items-center">
       <div className="w-screen flex justify-center">
@@ -62,11 +62,14 @@ const Footer = () => {
         </ul>
       </motion.div>
       <div
-        className="flex justify-between absolute bottom-[10%]"
+        className="flex justify-between absolute bottom-[10%] text-3xl"
         data-scroll
         data-scroll-speed="-5"
       >
-        <p>&copy;{today}. All Rights Reserved.</p>
+        <p>
+          &copy; Abu Hurairah&nbsp;
+          <Year />. All Rights Reserved.
+        </p>
       </div>
     </div>
   );
