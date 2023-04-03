@@ -18,6 +18,7 @@ import git from "./../../assets/git.png";
 import github from "./../../assets/github.png";
 import tailwindcss from "./../../assets/tailwindcss.png";
 import firebase from "./../../assets/firebase.png";
+import { kaushan } from "../hero/Hero";
 const Skills = () => {
   const SKILLS_ICONS: {
     image: StaticImageData;
@@ -126,7 +127,7 @@ const Skills = () => {
         <h1
           key={i}
           className="text-[10vw]  uppercase font-thin tracking-wider p-0 mt-10 hidden lg:block"
-          style={{ fontFamily: "Kaushan Script" }}
+          style={{ fontFamily: kaushan.style.fontFamily }}
           data-scroll
           data-scroll-speed="-5"
           data-scroll-direction="vertical"
@@ -137,7 +138,7 @@ const Skills = () => {
       <div>
         <motion.h1
           className="text-[12vw] text-center text-black uppercase font-thin tracking-wider p-0 m-0 block lg:hidden"
-          style={{ fontFamily: "Kaushan Script" }}
+          style={{ fontFamily: kaushan.style.fontFamily }}
           initial={{ opacity: 0, translateY: "10vw" }}
           animate={{ opacity: 1, translateY: 0 }}
         >

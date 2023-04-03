@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import "@fontsource/sirin-stencil";
-import "@fontsource/kaushan-script"; // Defaults to weight 400.
+import { kaushan, sirin } from "../hero/Hero";
 
 const AboutMe = () => {
   return (
@@ -13,8 +12,11 @@ const AboutMe = () => {
         <div className="w-screen" id="up">
           {/* For LG screen */}
           <h1
-            className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 hidden lg:block"
-            style={{ fontFamily: "Kaushan Script" }}
+            className={
+              // kaushan.className +
+              "text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 hidden lg:block"
+            }
+            style={{ fontFamily: kaushan.style.fontFamily }}
             data-scroll
             data-scroll-speed="-4"
             data-scroll-direction="vertical"
@@ -25,7 +27,7 @@ const AboutMe = () => {
           {/* For smaller screens */}
           <motion.h1
             className="text-[10vw] absolute top-5 left-[25%] text-white uppercase font-thin tracking-wider p-0 m-0 block lg:hidden"
-            style={{ fontFamily: "Kaushan Script" }}
+            style={{ fontFamily: kaushan.style.fontFamily }}
           >
             About Me
           </motion.h1>
@@ -35,6 +37,7 @@ const AboutMe = () => {
               initial={{ opacity: 0, translateY: "10vw" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.75 }}
+              style={{ fontFamily: sirin.style.fontFamily }}
               // data-scroll
               // data-scroll-direction="horizontal"
               // data-scroll-speed="10"
@@ -47,6 +50,7 @@ const AboutMe = () => {
               initial={{ opacity: 0, translateY: "10vw" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.75 }}
+              style={{ fontFamily: sirin.style.fontFamily }}
               // data-scroll
               // data-scroll-direction="horizontal"
               // data-scroll-speed="10"
@@ -67,6 +71,7 @@ const AboutMe = () => {
               initial={{ opacity: 0, translateY: "10vw" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.75 }}
+              style={{ fontFamily: sirin.style.fontFamily }}
               // data-scroll
               // data-scroll-direction="horizontal"
               // data-scroll-speed="10"

@@ -37,6 +37,7 @@ const ContactMe = () => {
               <a
                 href="tel:+923207443537"
                 className="text-xl ml-5 font-semibold"
+                style={{ fontFamily: "Sirin Stencil" }}
               >
                 +92 320 7443537
               </a>
@@ -48,6 +49,7 @@ const ContactMe = () => {
               <a
                 href="mailto:dev.abuhurairah@gmail.com"
                 className=" text-xl ml-5 font-semibold"
+                style={{ fontFamily: "Sirin Stencil" }}
               >
                 dev.abuhurairah@gmail.com
               </a>

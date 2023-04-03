@@ -7,8 +7,8 @@ import {
 } from "react-icons/ai";
 import { BsStackOverflow, BsWhatsapp } from "react-icons/bs";
 import Year from "./Year";
+import { kaushan, sirin } from "../hero/Hero";
 const Footer = () => {
-  const today = new Date().getFullYear();
   return (
     <div className="min-h-screen w-screen p-20 relative flex flex-col items-center">
       <div className="w-screen flex justify-center">
@@ -17,7 +17,7 @@ const Footer = () => {
           data-scroll
           data-scroll-speed="4"
           data-scroll-direction="vertical"
-          style={{ fontFamily: "Sirin Stencil" }}
+          style={{ fontFamily: kaushan.style.fontFamily }}
         >
           Abu Hurairah
         </h1>
@@ -65,6 +65,7 @@ const Footer = () => {
         className="flex justify-between absolute bottom-[10%] text-3xl"
         data-scroll
         data-scroll-speed="-5"
+        style={{ fontFamily: sirin.style.fontFamily }}
       >
         <p>
           &copy; Abu Hurairah&nbsp;

@@ -1,8 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import * as THREE from "three";
 import { motion } from "framer-motion";
-
+import { Kaushan_Script } from "next/font/google";
+import { Sirin_Stencil } from "next/font/google";
+export const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
+export const sirin = Sirin_Stencil({ subsets: ["latin"], weight: "400" });
 const Hero = () => {
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
@@ -93,11 +96,14 @@ const Hero = () => {
       ></div>
       <div className="absolute top-0 left-0  h-screen w-screen z-10 flex justify-between items-center ">
         <motion.div
-          className="h-screen flex items-center justify-center bg-black/60 absolute top-0 w-screen flex-col"
+          className="h-screen flex items-center justify-center bg-black/30 absolute top-0 w-screen flex-col"
           // data-scroll-section
         >
           <motion.h1
-            className=" text-[15vw] lg:text-[10vw] text-white text-center uppercase font-thin tracking-wider handWriting p-0 m-0"
+            className={
+              kaushan.className +
+              " text-[15vw] lg:text-[10vw] text-white text-center uppercase font-thin tracking-wider handWriting p-0 m-0"
+            }
             initial={{ opacity: 0, translate: "-50vw" }}
             animate={{ opacity: 1, translate: 0 }}
             transition={{
@@ -109,12 +115,13 @@ const Hero = () => {
             data-scroll
             data-scroll-speed="-12"
             data-scroll-direction="vertical"
-            style={{ fontFamily: "kaushan script" }}
           >
             Abu Hurairah
           </motion.h1>
           <motion.p
-            className=" text-[5vw] lg:text-[2vw] text-white text-center uppercase font-thin tracking-widest handWriting"
+            className={
+              " text-[5vw] lg:text-[2vw] text-white text-center uppercase font-thin tracking-widest handWriting"
+            }
             initial={{ opacity: 0, translate: "-50vw" }}
             animate={{ opacity: 1, translate: 0 }}
             transition={{
@@ -125,7 +132,7 @@ const Hero = () => {
             }}
             data-scroll
             data-scroll-speed="9"
-            style={{ fontFamily: "Sirin Stencil" }}
+            style={{ fontFamily: sirin.style.fontFamily }}
           >
             Hi All I am a developer, designer and teacher
           </motion.p>
